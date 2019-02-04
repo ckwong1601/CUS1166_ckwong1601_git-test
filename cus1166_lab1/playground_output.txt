@@ -1,0 +1,30 @@
+Python Playground
+
+Playing around with print statements.
+Variable a = 20.098 and is a(n) <class 'float'>. Types do not have to be declared.
+I changed variable a = None to the type <class 'NoneType'>.
+This statement can be used with a variable b = red.
+type(variable) returns the variable type. That statement is True.
+
+-
+Sandbox of python classes.
+Lists store data such as 196. They can be any type such as <class 'int'>.
+It's quite easy to print out lists [[100, 144, 196, 256, 324], ['Snek', 3.141596, False, None]]!
+Let's be fancier: ['Snek', False].
+Tuples are immutable. They can have 5 or twenty items, but not 9.66667.
+Dictionaries are like maps, but this one is empty.
+The ping to Chicago is 60.
+Sets are unordered and have no identical elements. This one has 2 elements.
+
+-
+Now to fancier things.
+This is a happy sentence.
+100
+144
+196
+0 - 100
+1 - 144
+2 - 196
+3 - 256
+4 - 324
+False
