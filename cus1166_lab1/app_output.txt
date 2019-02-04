@@ -1,0 +1,13 @@
+Student roster:
+Vinay Woodley - 67
+Abigail Monaghan - 76
+Menaal Johnston - 86
+Darrel Wooten - 91
+Danny Rooney - 69
+Ariel Whitfield - 73
+Emman Sanders - 88
+Milla Diaz - 97
+Eileen Landry - 56
+Joesph Guasp - 75
+
+Average: 77.8
