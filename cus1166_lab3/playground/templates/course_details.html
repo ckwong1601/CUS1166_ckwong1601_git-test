@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div>
+    <h1 class="display-4" style="color:blueviolet">{{course.course_name}}</h1>
+    <h1>{{course.course_title}}</h1>
+    <p>This is a class description.</p>
+    <p class="text-muted">Course ID: {{course.course_id}}</p>
+    <hr />
+</div>
+
+<div id="student-list" class="row mb-2">
+    <div class="col"><h3>Registered Students</h3></div>
+    <div id="register-student" class="col">
+        <form method="post" action="{{ url_for('register_student', course_id=course.course_id) }}" class="form-inline justify-content-end">
+            <input class="form-control mr-1 mb-1" type="text" name="name" placeholder="Student Name">
+            <input class="form-control mr-1 mb-1" type="text" name="grade" placeholder="Course Grade">
+            <button class="btn btn-primary" type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<div class="card-deck">
+    <div class="row">
+        {% for student in students %}
+        <div class="col-md-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"><b>{{student.student_name}}</b></p>
+                    <div class="row">
+                        <p class="card-text col" style="font-size: 14px;">Grade: {{student.student_grade}}</p>
+                        <p class="card-text text-muted col" style="font-size: 14px;">ID: {{student.student_id}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
