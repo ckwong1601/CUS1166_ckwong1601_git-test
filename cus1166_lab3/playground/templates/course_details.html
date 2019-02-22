@@ -2,9 +2,9 @@
 {% block body %}
 
 <div>
-    <h1 class="display-4" style="color:blueviolet">{{course.course_name}}</h1>
+    <h1 class="display-4" style="color:#8a2be2">{{course.course_name}}</h1>
     <h1>{{course.course_title}}</h1>
-    <p>This is a class description.</p>
+    <p>Lorem ipsum dolor sit amet, invenire definiebas te vim, nostrud laboramus ut est, no dicat legimus corrumpit sed.</p>
     <p class="text-muted">Course ID: {{course.course_id}}</p>
     <hr />
 </div>
@@ -12,9 +12,9 @@
 <div id="student-list" class="row mb-2">
     <div class="col"><h3>Registered Students</h3></div>
     <div id="register-student" class="col">
-        <form method="post" action="{{ url_for('register_student', course_id=course.course_id) }}" class="form-inline justify-content-end">
-            <input class="form-control mr-1 mb-1" type="text" name="name" placeholder="Student Name">
-            <input class="form-control mr-1 mb-1" type="text" name="grade" placeholder="Course Grade">
+        <form method="post" action="{{ url_for('register_student', course_id=course.course_id) }}" class="form-inline mb-1 justify-content-end">
+            <input class="form-control mr-1" type="text" name="name" placeholder="Student Name">
+            <input class="form-control mr-1" type="text" name="grade" placeholder="Course Grade">
             <button class="btn btn-primary" type="submit">Register</button>
         </form>
     </div>

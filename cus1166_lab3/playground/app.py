@@ -38,3 +38,9 @@ def register_student(course_id):
     students = course.students
     print(students)
     return render_template("course_details.html", course=course, students=students)
+
+@app.route("/search_course", methods=["POST"])
+def search_course():
+    keyword = request.form.get("keyword")
+    courses = Course.query.filter((Course.course_name.contains(keyword) | Course.course_title.contains(keyword)))
+    return render_template("index.html", courses=courses)

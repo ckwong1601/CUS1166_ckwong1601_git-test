@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<style>
-    .nav-background {
-        background-color: #F2D1B8;
-    }
-</style>
 
 <html>
     <head>
@@ -17,15 +12,23 @@
     </head>
     <body>
         <div id="navbar">
-            <nav class="navbar navbar-light nav-background">
-                <a class="ml-5 navbar-brand" href="/">Course List</a>
-                <nav class="navbar justify-content-end">
-                    <form class="form-inline mr-3">
-                        <input class="form-control mr-1" type="get" placeholder="Search Course">
-                        <button type="button" class="btn btn-secondary" type="search">Search</button>
-                    </form>
-                    <button type="button" class="btn btn-primary px-5 mr-5" data-toggle="modal" data-target="#addCourseModal">Add Course</button>
-                </nav>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#e4e4e4;">
+                <a class="navbar-brand ml-4" href="#"><b>Course Registration</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFull">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarFull">
+                    <nav class="navbar-nav">
+                        <a class="nav-item nav-link" href="/">Course List</a>
+                    </nav>
+                    <nav class="navbar-nav ml-auto">
+                        <form action="{{ url_for('search_course')}}" method="post" class="form-inline mr-1 my-1">
+                            <input class="form-control mr-1" type="text" name="keyword" placeholder="Course name or title">
+                            <button class="btn btn-secondary" type="submit">Search</button>
+                        </form>
+                        <button type="button" class="btn btn-primary my-1 mr-4" data-toggle="modal" data-target="#addCourseModal">Add Course</button>
+                    </div>
+                </div>
             </nav>
         </div>
 
@@ -47,7 +50,7 @@
             </div>
         </div>
 
-        <div id="course-list" class="mx-5 my-3">
+        <div id="course-list" class="mx-5 mt-4 mb-3" style="padding-top: 50px">
         {% block body %}
         {% endblock %} 
         </div>
