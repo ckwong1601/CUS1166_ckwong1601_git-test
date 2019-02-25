@@ -44,3 +44,13 @@ def search_course():
     keyword = request.form.get("keyword")
     courses = Course.query.filter((Course.course_name.contains(keyword) | Course.course_title.contains(keyword)))
     return render_template("index.html", courses=courses)
+
+def main():
+    if (len(sys.argv)==2):
+        if sys.argv[1] == 'createdb':
+            db.create_all()
+            print("Created database.")
+
+if __name__ == "__main__":
+    with app.app_context():
+        main()
